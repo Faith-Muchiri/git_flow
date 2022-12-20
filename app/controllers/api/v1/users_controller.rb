@@ -6,6 +6,7 @@ class Api::V1::UsersController < ApplicationController
             render json: {user: @user, token: token}, status: :created
         else
             render json: {error: 'Invalid username or password'}, status: :unprocessable_entity
+        end
     end
 
     private
